@@ -7,6 +7,6 @@ import com.eraser.coupon.shop.domain.Shop;
  */
 public interface UpdateShopUseCase {
 
-    Shop updateShop(Shop shop);
+    Shop updateShop(UpdateShopCommand command);
 
 }

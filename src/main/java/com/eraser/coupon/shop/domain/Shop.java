@@ -1,53 +1,79 @@
 package com.eraser.coupon.shop.domain;
 
+import com.eraser.coupon.shop.application.port.in.CreateShopCommand;
+import com.eraser.coupon.shop.application.port.in.DeleteShopCommand;
+import com.eraser.coupon.shop.application.port.in.UpdateShopCommand;
+import lombok.*;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
 
-
-@AllArgsConstructor
-@RequiredArgsConstructor
 @Getter
+@Builder
 public class Shop {
 
     /**
-     * Unique ID of a shop
+     * 샵 식별자
      */
-    private final String id;
+    private String id;
 
     /**
-     * Name of a shop
+     * 샵 이름
      */
     private String name;
 
     /**
-     * Description of a shop
+     * 샵 설명
      */
     private String description;
 
     /**
-     * Address of a shop
+     * 샵 주소
      */
     private String address;
 
     /**
-     * Phone number of a shop
+     * 샵 전화번호
      */
     private String phone;
 
     /**
-     * Fax number of a shop
-     */
-    private String fax;
-
-    /**
-     * Email of a shop
+     * 샵 이메일
      */
     private String email;
 
     /**
-     * Whether a shop is deleted
+     * 샵 삭제 여부
      */
     private boolean isDeleted;
+
+//    public static Shop of(String id, String name, String description, String address,
+//                              String phone, String email, boolean isDeleted) {
+//        return new Shop(id, name, address, description, phone, email, isDeleted);
+//    }
+
+
+    // 샵 생성을 위한 도메인 엔티티
+    public static Shop newShop(CreateShopCommand command) {
+        return Shop.builder()
+                .id(command.getId())
+                .name(command.getName())
+                .description(command.getDescription())
+                .address(command.getAddress())
+                .phone(command.getPhone())
+                .email(command.getEmail())
+                .isDeleted(false) // 샵 생성 시 삭제 여부는 false
+                .build();
+    }
+
+    // 샵 업데이트를 위한 도메인 엔티티
+    public static Shop existingShop(UpdateShopCommand command) {
+        return Shop.builder()
+                .id(command.getId())
+                .name(command.getName())
+                .description(command.getDescription())
+                .address(command.getAddress())
+                .phone(command.getPhone())
+                .email(command.getEmail())
+                .build();
+    }
+
 }

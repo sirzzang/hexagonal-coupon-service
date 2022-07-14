@@ -1,5 +1,6 @@
 package com.eraser.coupon.shop.application.service;
 
+import com.eraser.coupon.shop.application.port.in.CreateShopCommand;
 import com.eraser.coupon.shop.application.port.in.CreateShopUseCase;
 import com.eraser.coupon.shop.application.port.out.CreateShopPort;
 import com.eraser.coupon.shop.application.port.out.LoadShopPort;
@@ -14,15 +15,14 @@ public class CreateShopService implements CreateShopUseCase {
     private final CreateShopPort createShopPort;
 
     @Override
-    public Shop createShop(Shop shop) {
+    public Shop createShop(CreateShopCommand command) {
 
-        // 존재하는 샵인지 체크
-        Shop foundShop = loadShopPort.loadShop(shop.getId());
-        if (foundShop != null) {
-            throw new IllegalStateException("Shop already exists."); // TODO: BusinessException
-        }
+        // TODO: 존재하는 샵인지 체크: 사업자 등록번호?
+//        if (loadShopPort.loadShop(command.getId()) != null) {
+//            throw new IllegalStateException("Shop already exists."); // TODO: BusinessException
+//        }
 
-        // 샵 저장 후 출력값 반환
-        return createShopPort.createShop(shop);
+        // 샵 생성 후 출력값 반환
+        return createShopPort.createShop(Shop.openShop(command));
     }
 }

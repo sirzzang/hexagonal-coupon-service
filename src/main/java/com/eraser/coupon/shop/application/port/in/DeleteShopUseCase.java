@@ -6,6 +6,6 @@ package com.eraser.coupon.shop.application.port.in;
  */
 public interface DeleteShopUseCase {
 
-    boolean deleteShop(String shopId);
+    boolean deleteShop(DeleteShopCommand command);
 
 }

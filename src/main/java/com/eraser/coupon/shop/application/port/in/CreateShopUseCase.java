@@ -7,5 +7,5 @@ import com.eraser.coupon.shop.domain.Shop;
  */
 public interface CreateShopUseCase {
 
-    Shop createShop(Shop shop);
+    Shop createShop(CreateShopCommand command);
 }
