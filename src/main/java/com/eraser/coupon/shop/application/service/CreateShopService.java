@@ -5,10 +5,11 @@ import com.eraser.coupon.shop.application.port.in.CreateShopUseCase;
 import com.eraser.coupon.shop.application.port.out.CreateShopPort;
 import com.eraser.coupon.shop.application.port.out.LoadShopPort;
 import com.eraser.coupon.shop.domain.Shop;
+import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 
-@RequiredArgsConstructor
-public class CreateShopService implements CreateShopUseCase {
+@RequiredArgsConstructor(access = AccessLevel.PRIVATE)
+class CreateShopService implements CreateShopUseCase {
 
     // 의존성 주입
     private final LoadShopPort loadShopPort;
@@ -23,6 +24,6 @@ public class CreateShopService implements CreateShopUseCase {
 //        }
 
         // 샵 생성 후 출력값 반환
-        return createShopPort.createShop(Shop.openShop(command));
+        return createShopPort.createShop(Shop.newShop(command));
     }
 }

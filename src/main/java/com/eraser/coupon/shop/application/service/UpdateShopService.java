@@ -8,7 +8,7 @@ import com.eraser.coupon.shop.domain.Shop;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-public class UpdateShopService implements UpdateShopUseCase {
+class UpdateShopService implements UpdateShopUseCase {
 
     // 의존성 주입
     private final LoadShopPort loadShopPort;
@@ -23,6 +23,6 @@ public class UpdateShopService implements UpdateShopUseCase {
         }
 
         // 샵 업데이트 후 출력값 반환
-        return updateShopPort.updateShop(Shop.editShop(command));
+        return updateShopPort.updateShop(Shop.existingShop(command));
     }
 }

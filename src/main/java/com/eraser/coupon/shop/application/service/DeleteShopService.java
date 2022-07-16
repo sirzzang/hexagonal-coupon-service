@@ -8,7 +8,7 @@ import com.eraser.coupon.shop.domain.Shop;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-public class DeleteShopService implements DeleteShopUseCase {
+class DeleteShopService implements DeleteShopUseCase {
 
     // 의존성 주입
     private final LoadShopPort loadShopPort;
