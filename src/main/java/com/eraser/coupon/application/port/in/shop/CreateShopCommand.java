@@ -1,4 +1,4 @@
-package com.eraser.coupon.shop.application.port.in;
+package com.eraser.coupon.application.port.in.shop;
 
 import com.eraser.coupon.common.SelfValidating;
 import lombok.Getter;
@@ -23,9 +23,9 @@ public class CreateShopCommand extends SelfValidating<CreateShopCommand> {
 
     private String email;
 
-    public CreateShopCommand(String id, @NotNull String name, String description,
-                             @NotNull String address, @NotNull String phone, String email) {
-        this.id = id;
+    public CreateShopCommand(
+            @NotNull String name, String description, @NotNull String address, @NotNull String phone, String email
+    ) {
         this.name = name;
         this.description = description;
         this.address = address;

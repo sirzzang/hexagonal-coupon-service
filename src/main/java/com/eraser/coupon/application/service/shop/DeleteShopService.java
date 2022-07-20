@@ -1,10 +1,9 @@
-package com.eraser.coupon.shop.application.service;
+package com.eraser.coupon.application.service.shop;
 
-import com.eraser.coupon.shop.application.port.in.DeleteShopCommand;
-import com.eraser.coupon.shop.application.port.in.DeleteShopUseCase;
-import com.eraser.coupon.shop.application.port.out.DeleteShopPort;
-import com.eraser.coupon.shop.application.port.out.LoadShopPort;
-import com.eraser.coupon.shop.domain.Shop;
+import com.eraser.coupon.application.port.in.shop.DeleteShopCommand;
+import com.eraser.coupon.application.port.in.shop.DeleteShopUseCase;
+import com.eraser.coupon.application.port.out.shop.DeleteShopPort;
+import com.eraser.coupon.application.port.out.shop.LoadShopPort;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor

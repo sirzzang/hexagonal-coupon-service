@@ -1,7 +1,7 @@
-package com.eraser.coupon.shop.domain;
+package com.eraser.coupon.domain.shop;
 
-import com.eraser.coupon.shop.application.port.in.CreateShopCommand;
-import com.eraser.coupon.shop.application.port.in.UpdateShopCommand;
+import com.eraser.coupon.application.port.in.shop.CreateShopCommand;
+import com.eraser.coupon.application.port.in.shop.UpdateShopCommand;
 import lombok.Getter;
 import lombok.Setter;
 

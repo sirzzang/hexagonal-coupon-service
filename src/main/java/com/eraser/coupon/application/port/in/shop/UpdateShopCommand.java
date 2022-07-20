@@ -1,4 +1,4 @@
-package com.eraser.coupon.shop.application.port.in;
+package com.eraser.coupon.application.port.in.shop;
 
 import com.eraser.coupon.common.SelfValidating;
 import com.sun.istack.NotNull;
@@ -21,8 +21,11 @@ public class UpdateShopCommand extends SelfValidating<UpdateShopCommand> {
 
     private String email;
 
-    public UpdateShopCommand(@NotNull String id, String name, String description,
-                             String address, String phone, String email) {
+    // TODO: 생성자를 이용하는 경우, 일부 정보만 수정하고 싶을 때 command를 어떻게 생성하는 것이 좋은가? 빌더...?
+    public UpdateShopCommand(
+            @NotNull String id, String name, String description,
+            String address, String phone, String email
+    ) {
         this.id = id;
         this.name = name;
         this.description = description;

@@ -1,4 +1,4 @@
-package com.eraser.coupon.shop.application.port.in;
+package com.eraser.coupon.application.port.in.shop;
 
 
 /**

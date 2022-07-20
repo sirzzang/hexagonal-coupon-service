@@ -1,6 +1,6 @@
-package com.eraser.coupon.shop.application.port.out;
+package com.eraser.coupon.application.port.out.shop;
 
-import com.eraser.coupon.shop.domain.Shop;
+import com.eraser.coupon.domain.shop.Shop;
 
 /**
  * 샵 조회용 아웃고잉(데이터베이스) 어댑터 포트
