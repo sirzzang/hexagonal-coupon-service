@@ -17,11 +17,8 @@ class DeleteShopController {
     @PostMapping("/shops/{shopId}/delete")
     private ResponseEntity<?> deleteShop(@PathVariable(value = "shopId") String shopId) {
 
-        // 유스케이스 입력 모델 매핑
-        DeleteShopCommand command = new DeleteShopCommand(shopId);
-
         // 유스케이스 호출
-        deleteShopUseCase.deleteShop(command);
+        deleteShopUseCase.deleteShop(shopId);
 
         // TODO: 반환 응답 구체화
         return ResponseEntity.ok().body("Shop successfully deleted.");

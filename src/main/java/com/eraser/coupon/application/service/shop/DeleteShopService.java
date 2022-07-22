@@ -14,14 +14,14 @@ class DeleteShopService implements DeleteShopUseCase {
     private final DeleteShopPort deleteShopPort;
 
     @Override
-    public boolean deleteShop(DeleteShopCommand command) {
+    public boolean deleteShop(String shopId) {
 
         // 삭제할 샵이 존재하는지 체크
-        if (loadShopPort.loadShop(command.getId()) == null) {
+        if (loadShopPort.loadShop(shopId) == null) {
             throw new IllegalStateException("삭제할 샵 정보를 찾을 수 없습니다.");
         }
 
         // 삭제 후 출력값 반환
-        return deleteShopPort.deleteShop(command.getId());
+        return deleteShopPort.deleteShop(shopId);
     }
 }
