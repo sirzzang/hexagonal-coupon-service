@@ -15,4 +15,6 @@ class GetShopService implements GetShopInfoQuery {
     public Shop getShop(String shopId) {
         return loadShopPort.loadShop(shopId);
     }
+
+    // TODO: 샵 리스트 조회
 }
