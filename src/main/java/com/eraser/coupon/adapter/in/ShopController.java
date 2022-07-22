@@ -1,5 +1,6 @@
 package com.eraser.coupon.adapter.in;
 
+import com.eraser.coupon.adapter.in.dto.CreateShopDto;
 import com.eraser.coupon.application.port.in.shop.*;
 import com.eraser.coupon.common.WebAdapter;
 import com.eraser.coupon.domain.shop.Shop;
@@ -10,10 +11,10 @@ import org.springframework.web.bind.annotation.*;
 @WebAdapter
 @RestController
 @RequiredArgsConstructor
-public class ShopController {
+class ShopController {
 
     // TODO: responsebody 에러 핸들링
-    // TODO: 책과 달리 한 컨트롤러에 모든 서비스에 대한 웹 어댑터 다 작성했는데?
+    // TODO: 책과 달리 한 컨트롤러에 모든 서비스에 대한 웹 어댑터 다 작성
 
     private final CreateShopUseCase createShopUseCase;
     private final GetShopInfoQuery getShopInfoQuery;
@@ -26,17 +27,14 @@ public class ShopController {
         return ResponseEntity.ok().body(shop);
     }
 
-    //  -> 이 때문에 컨트롤러만의 모델?
-
-    /**
-     * TODO: 컨트롤러 DTO 없이 바로 도메인으로 접근해도 되는지?
-     * - 책에서 컨트롤러만의 모델을 두라고 했던 것이 이런 맥락에서의 컨트롤러 DTO인가?
-     * - Hexagonal-Architecture-DDD 소스코드에서는 컨트롤러에서 바로 Order 도메인으로 접근함
-     */
     @PostMapping("/shops")
-    public ResponseEntity<Shop> registerShop(@RequestBody Shop shop) {
+    public ResponseEntity<Shop> registerShop(@RequestBody CreateShopDto createShopDto) {
         CreateShopCommand command = new CreateShopCommand(
-                shop.getName(), shop.getDescription(), shop.getAddress(), shop.getPhone(), shop.getEmail()
+                createShopDto.getName(),
+                createShopDto.getDescription(),
+                createShopDto.getAddress(),
+                createShopDto.getPhone(),
+                createShopDto.getEmail()
         );
 
         Shop createdShop = createShopUseCase.createShop(command);
