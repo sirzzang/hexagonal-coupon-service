@@ -24,6 +24,8 @@ class FindShopController {
         return ResponseEntity.ok().body(foundShop);
     }
 
+    // TODO: 샵 리스트 호출 api 설계 및 구현
+
     /**
      * TODO: shopId uuid 형식에 맞는지 검증
      * - annotation

@@ -5,6 +5,8 @@ import com.eraser.coupon.application.port.out.shop.LoadShopPort;
 import com.eraser.coupon.domain.shop.Shop;
 import lombok.RequiredArgsConstructor;
 
+import java.util.List;
+
 @RequiredArgsConstructor
 class GetShopService implements GetShopInfoQuery {
 
@@ -16,5 +18,11 @@ class GetShopService implements GetShopInfoQuery {
         return loadShopPort.loadShop(shopId);
     }
 
-    // TODO: 샵 리스트 조회
+    @Override
+    public List<String> getShopList() {
+
+        return loadShopPort.loadShopIds();
+    }
+
+
 }
