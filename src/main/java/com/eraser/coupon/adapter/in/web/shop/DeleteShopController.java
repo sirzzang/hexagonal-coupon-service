@@ -1,6 +1,5 @@
 package com.eraser.coupon.adapter.in.web.shop;
 
-import com.eraser.coupon.application.port.in.shop.DeleteShopCommand;
 import com.eraser.coupon.application.port.in.shop.DeleteShopUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

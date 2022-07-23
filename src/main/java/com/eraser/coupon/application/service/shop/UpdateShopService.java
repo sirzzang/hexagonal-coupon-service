@@ -15,14 +15,21 @@ class UpdateShopService implements UpdateShopUseCase {
     private final UpdateShopPort updateShopPort;
 
     @Override
-    public Shop updateShop(UpdateShopCommand command) {
+    public boolean updateShop(UpdateShopCommand command) {
 
         // 비즈니스 규칙 검증
         if (loadShopPort.loadShop(command.getId()) == null) {
             throw new IllegalStateException("존재하지 않는 샵입니다.");
         }
 
-        // 샵 업데이트 후 출력값 반환
-        return updateShopPort.updateShop(Shop.existingShop(command));
+        // 샵 업데이트 후
+        updateShopPort.updateShop(Shop.existingShop(command));
+
+        /**
+         * TODO: 샵 정상 업데이트 여부 확인 방법
+         * - 제대로 업데이트되었는지 확인해야 하지 않을까
+         * - Shop 도메인 객체 equals 재정의?
+         */
+        return true;
     }
 }

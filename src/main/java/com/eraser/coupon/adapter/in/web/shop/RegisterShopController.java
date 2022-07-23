@@ -31,10 +31,10 @@ class RegisterShopController {
         );
 
         // 유스케이스 호출
-        // TODO: 도메인 그대로 반환하면 안 됨
-        Shop createdShop = createShopUseCase.createShop(command);
+        String shopId = createShopUseCase.createShop(command);
 
-        return ResponseEntity.ok().body(createdShop);
+        // 생성된 샵 id 반환
+        return ResponseEntity.ok().body(shopId);
     }
 
     @Getter

@@ -8,6 +8,6 @@ import com.eraser.coupon.domain.shop.Shop;
 public interface UpdateShopUseCase {
 
     // TODO: Shop 객체를 전부 반환할 필요가 있을지 고민해 보기
-    Shop updateShop(UpdateShopCommand command);
+    boolean updateShop(UpdateShopCommand command);
 
 }

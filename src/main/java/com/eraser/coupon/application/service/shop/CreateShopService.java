@@ -16,14 +16,15 @@ class CreateShopService implements CreateShopUseCase {
     private final CreateShopPort createShopPort;
 
     @Override
-    public Shop createShop(CreateShopCommand command) {
+    public String createShop(CreateShopCommand command) {
 
         // TODO: 존재하는 샵인지 체크: 사업자 등록번호?
 //        if (loadShopPort.loadShop(command.getId()) != null) {
 //            throw new IllegalStateException("Shop already exists."); // TODO: BusinessException
 //        }
 
-        // 샵 생성 후 출력값 반환
-        return createShopPort.createShop(Shop.newShop(command));
+        // 샵 생성 후 샵 id 반환
+        Shop shop = createShopPort.createShop(Shop.newShop(command));
+        return shop.getId();
     }
 }

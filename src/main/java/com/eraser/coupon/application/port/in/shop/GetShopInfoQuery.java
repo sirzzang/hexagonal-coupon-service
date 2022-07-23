@@ -8,4 +8,5 @@ import com.eraser.coupon.domain.shop.Shop;
 public interface GetShopInfoQuery {
 
     Shop getShop(String shopId);
+
 }

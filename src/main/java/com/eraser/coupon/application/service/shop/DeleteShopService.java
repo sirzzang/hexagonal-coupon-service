@@ -1,6 +1,5 @@
 package com.eraser.coupon.application.service.shop;
 
-import com.eraser.coupon.application.port.in.shop.DeleteShopCommand;
 import com.eraser.coupon.application.port.in.shop.DeleteShopUseCase;
 import com.eraser.coupon.application.port.out.shop.DeleteShopPort;
 import com.eraser.coupon.application.port.out.shop.LoadShopPort;

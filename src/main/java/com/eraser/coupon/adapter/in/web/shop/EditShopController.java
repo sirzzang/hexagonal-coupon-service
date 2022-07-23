@@ -36,10 +36,9 @@ class EditShopController {
         );
 
         // 유스케이스 호출
-        // TODO: 도메인 바로 반환하면 안 됨
-        Shop updatedShop = updateShopUseCase.updateShop(command);
+        updateShopUseCase.updateShop(command);
 
-        return ResponseEntity.ok().body(updatedShop);
+            return ResponseEntity.ok().body("샵 " + shopId + " 정보가 수정되었습니다.");
     }
 
     @Getter
