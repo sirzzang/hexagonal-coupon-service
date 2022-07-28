@@ -4,9 +4,11 @@ import com.eraser.coupon.application.port.in.shop.UpdateShopCommand;
 import com.eraser.coupon.application.port.in.shop.UpdateShopUseCase;
 import com.eraser.coupon.application.port.out.shop.LoadShopPort;
 import com.eraser.coupon.application.port.out.shop.UpdateShopPort;
+import com.eraser.coupon.common.UseCase;
 import com.eraser.coupon.domain.shop.Shop;
 import lombok.RequiredArgsConstructor;
 
+@UseCase
 @RequiredArgsConstructor
 class UpdateShopService implements UpdateShopUseCase {
 

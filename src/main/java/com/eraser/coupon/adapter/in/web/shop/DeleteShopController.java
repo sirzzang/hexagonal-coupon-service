@@ -1,12 +1,14 @@
 package com.eraser.coupon.adapter.in.web.shop;
 
 import com.eraser.coupon.application.port.in.shop.DeleteShopUseCase;
+import com.eraser.coupon.common.WebAdapter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+@WebAdapter
 @RestController
 @RequiredArgsConstructor
 class DeleteShopController {

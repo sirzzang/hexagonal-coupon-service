@@ -2,11 +2,13 @@ package com.eraser.coupon.application.service.shop;
 
 import com.eraser.coupon.application.port.in.shop.GetShopInfoQuery;
 import com.eraser.coupon.application.port.out.shop.LoadShopPort;
+import com.eraser.coupon.common.UseCase;
 import com.eraser.coupon.domain.shop.Shop;
 import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 
+@UseCase
 @RequiredArgsConstructor
 class GetShopService implements GetShopInfoQuery {
 

@@ -3,8 +3,10 @@ package com.eraser.coupon.application.service.shop;
 import com.eraser.coupon.application.port.in.shop.DeleteShopUseCase;
 import com.eraser.coupon.application.port.out.shop.DeleteShopPort;
 import com.eraser.coupon.application.port.out.shop.LoadShopPort;
+import com.eraser.coupon.common.UseCase;
 import lombok.RequiredArgsConstructor;
 
+@UseCase
 @RequiredArgsConstructor
 class DeleteShopService implements DeleteShopUseCase {
 

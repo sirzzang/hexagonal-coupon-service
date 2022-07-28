@@ -4,10 +4,12 @@ import com.eraser.coupon.application.port.in.shop.CreateShopCommand;
 import com.eraser.coupon.application.port.out.shop.CreateShopPort;
 import com.eraser.coupon.application.port.in.shop.CreateShopUseCase;
 import com.eraser.coupon.application.port.out.shop.LoadShopPort;
+import com.eraser.coupon.common.UseCase;
 import com.eraser.coupon.domain.shop.Shop;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 
+@UseCase
 @RequiredArgsConstructor(access = AccessLevel.PRIVATE)
 class CreateShopService implements CreateShopUseCase {
 
