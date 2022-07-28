@@ -1,5 +1,6 @@
 package com.eraser.coupon.adapter.in.web.shop;
 
+import com.eraser.coupon.adapter.in.web.shop.CreateShopDto;
 import com.eraser.coupon.application.port.in.shop.CreateShopCommand;
 import com.eraser.coupon.application.port.in.shop.CreateShopUseCase;
 import com.eraser.coupon.domain.shop.Shop;
@@ -37,16 +38,4 @@ class RegisterShopController {
         return ResponseEntity.ok().body(shopId);
     }
 
-    @Getter
-    @NoArgsConstructor
-    @AllArgsConstructor
-    private class CreateShopDto {
-
-        private String name;
-        private String description;
-        private String address;
-        private String phone;
-        private String email;
-
-    }
 }
