@@ -20,11 +20,11 @@ class GetShopService implements GetShopInfoQuery {
         return loadShopPort.loadShop(shopId);
     }
 
-    @Override
-    public List<String> getShopList() {
-
-        return loadShopPort.loadShopIds();
-    }
+//    @Override
+//    public List<String> getShopList() {
+//
+//        return loadShopPort.loadShopIds();
+//    }
 
 
 }

@@ -7,5 +7,5 @@ import com.eraser.coupon.domain.shop.Shop;
  */
 public interface CreateShopPort {
 
-    Shop createShop(Shop shop);
+    Long createShop(Shop shop);
 }

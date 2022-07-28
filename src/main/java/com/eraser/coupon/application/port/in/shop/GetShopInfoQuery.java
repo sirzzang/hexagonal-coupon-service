@@ -11,6 +11,6 @@ public interface GetShopInfoQuery {
 
     Shop getShop(Long shopId);
 
-    List<String> getShopList();
+//    List<String> getShopList();
 
 }

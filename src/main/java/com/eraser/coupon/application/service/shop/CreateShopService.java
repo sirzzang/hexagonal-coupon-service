@@ -26,7 +26,6 @@ class CreateShopService implements CreateShopUseCase {
 //        }
 
         // 샵 생성 후 샵 id 반환
-        Shop shop = createShopPort.createShop(Shop.newShop(command));
-        return shop.getId();
+        return createShopPort.createShop(Shop.newShop(command));
     }
 }

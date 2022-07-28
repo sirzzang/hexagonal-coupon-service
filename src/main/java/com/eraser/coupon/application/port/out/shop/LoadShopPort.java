@@ -11,5 +11,5 @@ public interface LoadShopPort {
 
     Shop loadShop(Long id);
 
-    List<String> loadShopIds();
+//    List<String> loadShopIds();
 }
