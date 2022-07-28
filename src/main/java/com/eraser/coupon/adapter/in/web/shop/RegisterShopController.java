@@ -31,7 +31,7 @@ class RegisterShopController {
         );
 
         // 유스케이스 호출
-        String shopId = createShopUseCase.createShop(command);
+        Long shopId = createShopUseCase.createShop(command);
 
         // 생성된 샵 id 반환
         return ResponseEntity.ok().body(shopId);

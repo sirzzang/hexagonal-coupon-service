@@ -16,7 +16,7 @@ class CreateShopService implements CreateShopUseCase {
     private final CreateShopPort createShopPort;
 
     @Override
-    public String createShop(CreateShopCommand command) {
+    public Long createShop(CreateShopCommand command) {
 
         // TODO: 존재하는 샵인지 체크: 사업자 등록번호?
 //        if (loadShopPort.loadShop(command.getId()) != null) {

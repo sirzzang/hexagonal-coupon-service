@@ -7,6 +7,5 @@ import com.eraser.coupon.domain.shop.Shop;
  */
 public interface CreateShopUseCase {
 
-    // TODO: Shop 객체를 전부 반환할 필요가 있을지 고민해 보기
-    String createShop(CreateShopCommand command);
+    Long createShop(CreateShopCommand command);
 }

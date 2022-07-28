@@ -9,7 +9,7 @@ import java.util.List;
  */
 public interface GetShopInfoQuery {
 
-    Shop getShop(String shopId);
+    Shop getShop(Long shopId);
 
     List<String> getShopList();
 

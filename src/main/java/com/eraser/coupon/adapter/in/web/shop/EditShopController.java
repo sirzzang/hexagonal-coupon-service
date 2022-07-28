@@ -2,7 +2,6 @@ package com.eraser.coupon.adapter.in.web.shop;
 
 import com.eraser.coupon.application.port.in.shop.UpdateShopCommand;
 import com.eraser.coupon.application.port.in.shop.UpdateShopUseCase;
-import com.eraser.coupon.domain.shop.Shop;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,7 +20,7 @@ class EditShopController {
 
     @PostMapping("/shops/{shopId}/update")
     private ResponseEntity<?> editShop(
-            @PathVariable(value = "shopId") String shopId,
+            @PathVariable(value = "shopId") Long shopId,
             @RequestBody UpdateShopDto updateShopDto
     ) {
 

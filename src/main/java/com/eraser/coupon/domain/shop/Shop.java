@@ -12,7 +12,7 @@ public class Shop {
     /**
      * 샵 식별자
      */
-    private String id;
+    private Long id;
 
     /**
      * 샵 이름
@@ -57,7 +57,7 @@ public class Shop {
     }
 
     // id 있는 생성자(영속 후 수정용)
-    protected Shop(String id, String name, String description, String address, String phone, String email) {
+    protected Shop(Long id, String name, String description, String address, String phone, String email) {
         this.id = id;
         this.name = name;
         this.description = description;

@@ -9,7 +9,7 @@ import java.util.List;
  */
 public interface LoadShopPort {
 
-    Shop loadShop(String id);
+    Shop loadShop(Long id);
 
     List<String> loadShopIds();
 }

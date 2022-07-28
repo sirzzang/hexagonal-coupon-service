@@ -14,7 +14,7 @@ class GetShopService implements GetShopInfoQuery {
     private final LoadShopPort loadShopPort;
 
     @Override
-    public Shop getShop(String shopId) {
+    public Shop getShop(Long shopId) {
         return loadShopPort.loadShop(shopId);
     }
 

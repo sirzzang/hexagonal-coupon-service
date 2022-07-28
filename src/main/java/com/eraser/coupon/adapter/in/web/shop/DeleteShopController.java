@@ -14,7 +14,7 @@ class DeleteShopController {
     private final DeleteShopUseCase deleteShopUseCase;
 
     @PostMapping("/shops/{shopId}/delete")
-    private ResponseEntity<?> deleteShop(@PathVariable(value = "shopId") String shopId) {
+    private ResponseEntity<?> deleteShop(@PathVariable(value = "shopId") Long shopId) {
 
         // 유스케이스 호출
         deleteShopUseCase.deleteShop(shopId);

@@ -15,7 +15,7 @@ class FindShopController {
     private final GetShopInfoQuery getShopInfoQuery;
 
     @GetMapping("/shops/{shopId}")
-    private ResponseEntity<?> findShop(@PathVariable(value = "shopId") String shopId) {
+    private ResponseEntity<?> findShop(@PathVariable(value = "shopId") Long shopId) {
 
         // 유스케이스 호출
         // TODO: 도메인 그대로 반환하면 안 됨

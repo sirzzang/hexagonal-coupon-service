@@ -8,7 +8,7 @@ import javax.validation.constraints.NotNull;
 @Getter
 public class CreateShopCommand extends SelfValidating<CreateShopCommand> {
 
-    private String id;
+    private Long id;
 
     @NotNull
     private String name;
